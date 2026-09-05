@@ -1,0 +1,6 @@
+Editor, stress 140: 6.51 ms avg / p99 9.07 / 21.30 KB/f / 16 GC (медиана 3 прогонов)
+WebGL, 60 Hz: упор в rAF, 67 GC за 30 с
+WebGL, 6× throttle: 87.42 ms avg / p95 110 / p99 132 / 11.4 FPS / 11.88 KB/f
+Chrome: Scripting 90.6%, Rendering+Painting 2.1%, main thread ~98%, INP 1043 ms
+Build: 10.19 MB on-wire (.wasm 8.1 MB = 80%), распакованный ~38.8 MB
+Load: cold 4G 11.1 s, cold localhost 222 ms, warm 219 ms
