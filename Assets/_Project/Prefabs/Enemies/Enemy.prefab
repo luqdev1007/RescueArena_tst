@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 5077811669504598655}
   - component: {fileID: 5247848154578719975}
   - component: {fileID: 2752425364711472810}
-  - component: {fileID: 3317552944190293081}
   - component: {fileID: 7503493462818546572}
   - component: {fileID: 7292370888095483164}
   - component: {fileID: 5012312157242924007}
+  - component: {fileID: 8608626577460226601}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -146,21 +146,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &3317552944190293081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4150209371138837703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 707463084ae114c19901605f9f57797e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WebGLRescueArena.EnemyAttack
-  damage: 8
-  attackRange: 1.35
-  attackCooldown: 0.9
 --- !u!114 &7503493462818546572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +162,7 @@ MonoBehaviour:
   obstructionMask:
     serializedVersion: 2
     m_Bits: 256
+  _rigidbody: {fileID: 0}
 --- !u!114 &7292370888095483164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,3 +193,15 @@ MonoBehaviour:
   damage: 8
   attackRange: 1.35
   attackCooldown: 0.9
+--- !u!114 &8608626577460226601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4150209371138837703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865b581977533f64b827357741170bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WebGLRescueArena.PooledObject
