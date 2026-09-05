@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5949651061558886954}
   - component: {fileID: 7203276040670853460}
   - component: {fileID: 3372332155777337051}
+  - component: {fileID: 7089505000373414541}
+  - component: {fileID: -1296449476650169953}
   m_Layer: 0
   m_Name: EnemyDeathEffect
   m_TagString: Untagged
@@ -4836,3 +4838,29 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!114 &7089505000373414541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183265364089780209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865b581977533f64b827357741170bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WebGLRescueArena.PooledObject
+--- !u!114 &-1296449476650169953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183265364089780209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b2fa86b03362e4daa37048e379048b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WebGLRescueArena.PooledEffect
+  duration: 0.4
+  particles: {fileID: 7203276040670853460}

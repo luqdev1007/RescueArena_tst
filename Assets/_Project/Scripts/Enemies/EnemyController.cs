@@ -7,11 +7,26 @@ namespace WebGLRescueArena
     {
         [SerializeField] private float moveSpeed = 3f;
         [SerializeField] private LayerMask obstructionMask;
+        [SerializeField] private Rigidbody _rigidbody;
 
         private Transform target;
         private EnemyAttack attack;
 
         private void Awake() => attack = GetComponent<EnemyAttack>();
+
+        private void OnEnable()
+        {
+            target = null;
+
+            if (_rigidbody == null) 
+            {
+                _rigidbody = GetComponent<Rigidbody>();
+            }
+
+            _rigidbody.linearVelocity = Vector3.zero;
+            _rigidbody.angularVelocity = Vector3.zero; 
+        }
+
 
         private void Update()
         {
@@ -38,8 +53,5 @@ namespace WebGLRescueArena
             transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
             attack.Tick(target);
         }
-
-        // not using now
-        public void Tick() { }
     }
 }
