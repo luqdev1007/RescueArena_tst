@@ -8,6 +8,8 @@ namespace WebGLRescueArena
         private static GameBootstrap instance;
         private void Awake()
         {
+            Application.targetFrameRate = -1; // test
+
             if (instance != null) { Destroy(gameObject); return; }
             instance = this;
             DontDestroyOnLoad(gameObject);
