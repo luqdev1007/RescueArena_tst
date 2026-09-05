@@ -154,4 +154,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WebGLRescueArena.Projectile
   lifetime: 2.5
-  fallbackImpactEffect: {fileID: 0}
+  fallbackImpactEffect: {fileID: 111308745886222403, guid: 87148ca2fe764487eb920bf482da1d2a, type: 3}

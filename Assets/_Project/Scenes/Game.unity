@@ -1754,7 +1754,7 @@ MonoBehaviour:
   firePoint: {fileID: 414729842}
   fireRate: 0.12
   projectileSpeed: 18
-  damage: 10
+  damage: 100
 --- !u!114 &729014388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1767,7 +1767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a869ce3f8844c4ddb8eeca84ae796801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WebGLRescueArena.PlayerHealth
-  maxHealth: 100
+  maxHealth: 500
 --- !u!114 &729014389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1821,7 +1821,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!136 &729014392
 CapsuleCollider:
