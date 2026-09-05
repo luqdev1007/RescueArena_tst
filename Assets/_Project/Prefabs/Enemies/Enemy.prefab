@@ -162,7 +162,6 @@ MonoBehaviour:
   obstructionMask:
     serializedVersion: 2
     m_Bits: 256
-  _rigidbody: {fileID: 0}
 --- !u!114 &7292370888095483164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707463084ae114c19901605f9f57797e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WebGLRescueArena.EnemyAttack
-  damage: 8
+  damage: 1
   attackRange: 1.35
   attackCooldown: 0.9
 --- !u!114 &8608626577460226601
