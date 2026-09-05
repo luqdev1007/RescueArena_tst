@@ -7,19 +7,25 @@ namespace WebGLRescueArena
     {
         [SerializeField] private float moveSpeed = 3f;
         [SerializeField] private LayerMask obstructionMask;
+        [SerializeField] private int obstructionCheckInterval = 4;
         private Transform selfTransform;
         private Transform target;
         private EnemyAttack attack;
         private Rigidbody body;
+        private int checkOffset;
+        private bool obstructed;
+        private static int instanceCounter;
         private void Awake()
         {
             selfTransform = transform;
             attack = GetComponent<EnemyAttack>();
             body = GetComponent<Rigidbody>();
+            checkOffset = instanceCounter++;
         }
         private void OnEnable()
         {
             target = null;
+            obstructed = false;
             if (body != null) { body.linearVelocity = Vector3.zero; body.angularVelocity = Vector3.zero; }
         }
         private void Update()
@@ -37,7 +43,11 @@ namespace WebGLRescueArena
             float distance = direction.magnitude;
             if (distance < 0.0001f) return;
             Vector3 forward = direction / distance;
-            if (Physics.Raycast(selfPosition + Vector3.up * 0.4f, forward, distance, obstructionMask)) return;
+            if ((Time.frameCount + checkOffset) % obstructionCheckInterval == 0)
+            {
+                obstructed = Physics.Raycast(selfPosition + Vector3.up * 0.4f, forward, distance, obstructionMask);
+            }
+            if (obstructed) return;
             if (distance > 1.1f) selfTransform.position = selfPosition + forward * (moveSpeed * Time.deltaTime);
             selfTransform.rotation = Quaternion.LookRotation(forward);
             attack.Tick(target, distance);
