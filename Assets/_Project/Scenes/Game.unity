@@ -959,6 +959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 474618716}
+  - component: {fileID: 474618717}
   m_Layer: 0
   m_Name: ProjectileContainer
   m_TagString: Untagged
@@ -981,6 +982,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &474618717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474618715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a79b8f4fb964a64832fda5dd944b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WebGLRescueArena.SimpleObjectPool
+  prefab: {fileID: 5492803367963791446, guid: 4a0228db86ec34daf8143fa179baa2bc, type: 3}
+  initialSize: 32
 --- !u!1 &483856445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,7 +1801,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WebGLRescueArena.PlayerWeapon
   input: {fileID: 729014390}
-  projectilePrefab: {fileID: 7532862692584480740, guid: 4a0228db86ec34daf8143fa179baa2bc, type: 3}
+  projectilePool: {fileID: 474618717}
+  impactPool: {fileID: 1535107812}
   firePoint: {fileID: 414729842}
   fireRate: 0.12
   projectileSpeed: 18
@@ -3487,8 +3503,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1535107811}
+  - component: {fileID: 1535107812}
   m_Layer: 0
-  m_Name: Effects
+  m_Name: EffectsContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3509,6 +3526,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1535107812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535107810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a79b8f4fb964a64832fda5dd944b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WebGLRescueArena.SimpleObjectPool
+  prefab: {fileID: 111308745886222403, guid: 87148ca2fe764487eb920bf482da1d2a, type: 3}
+  initialSize: 16
 --- !u!1 &1583670569
 GameObject:
   m_ObjectHideFlags: 0
