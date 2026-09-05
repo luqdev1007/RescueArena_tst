@@ -38,5 +38,8 @@ namespace WebGLRescueArena
             transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
             attack.Tick(target);
         }
+
+        // not using now
+        public void Tick() { }
     }
 }
