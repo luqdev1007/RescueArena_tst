@@ -10,16 +10,10 @@ namespace WebGLRescueArena
         private Transform target;
         private EnemyAttack attack;
         private EnemyManager manager;
+
         private void Awake() => attack = GetComponent<EnemyAttack>();
-        private void Start()
-        {
-            manager = GetComponentInParent<EnemyManager>();
-            if (manager != null) manager.Register(this);
-        }
-        private void OnDestroy()
-        {
-            if (manager != null) manager.Unregister(this);
-        }
+
+
         private void Update()
         {
             if (target == null) target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -31,6 +25,7 @@ namespace WebGLRescueArena
             transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
             attack.Tick(target);
         }
+
         public void Tick() { }
     }
 }
