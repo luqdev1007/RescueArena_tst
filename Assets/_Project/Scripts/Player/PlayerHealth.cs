@@ -18,6 +18,7 @@ namespace WebGLRescueArena
             {
                 dead = true;
                 GameEvents.RaisePlayerDied();
+                gameObject.SetActive(false);
             }
         }
     }
